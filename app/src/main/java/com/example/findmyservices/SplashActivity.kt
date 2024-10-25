@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import android.util.Log
 
 class SplashActivity : AppCompatActivity() {
 
@@ -12,12 +13,21 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Delay for 3 seconds before moving to MainActivity
+        Log.d("SplashActivity", "Splash screen displayed")
+
+        // Delay for 3 seconds before moving to LoginActivity
         Handler(Looper.getMainLooper()).postDelayed({
-            // Start MainActivity after splash screen
-            startActivity(Intent(this, MainActivity::class.java))
-            // Close SplashActivity so that it's removed from the back stack
+            Log.d("SplashActivity", "Navigating to LoginActivity")
+
+            // Start LoginActivity after splash screen
+            startActivity(Intent(this, LoginActivity::class.java))
+
+            // Close SplashActivity so it’s removed from the back stack
             finish()
-        }, 3000)  // 3000 milliseconds = 3 seconds
+        }, 3000) // 3000 milliseconds = 3 seconds
     }
 }
+
+
+
+

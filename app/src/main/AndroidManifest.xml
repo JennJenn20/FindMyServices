@@ -24,10 +24,10 @@
             </intent-filter>
         </activity>
 
-        <!-- MainActivity, which will be launched after the splash screen -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FindMyServices">
         </activity>
 
     </application>
